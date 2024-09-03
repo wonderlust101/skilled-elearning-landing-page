@@ -1,18 +1,19 @@
 @use '../abstract' as a;
 
 .landing-page {
+  background: var(--clr-gradients-white);
   @include a.breakpoint(medium) {
-    background: url('../images/image-hero-tablet@2x.webp') top -4rem right -16rem no-repeat;
+    background: url('../images/image-hero-tablet@2x.webp') top -4rem right -16rem no-repeat, var(--clr-gradients-white);
     background-size: 40rem;
   }
 
   @include a.breakpoint(large) {
-    background: url('../images/image-hero-desktop@2x.webp') top -6rem right -20rem no-repeat;
+    background: url('../images/image-hero-desktop@2x.webp') top -6rem right -20rem no-repeat, var(--clr-gradients-white);
     background-size: 65rem;
   }
 
   @include a.breakpoint(x-large) {
-    background: url('../images/image-hero-desktop@2x.webp') calc(50% + 43rem) -6rem no-repeat;
+    background: url('../images/image-hero-desktop@2x.webp') calc(50% + 43rem) -6rem no-repeat, var(--clr-gradients-white);
     background-size: 65rem;
   }
 
@@ -25,9 +26,8 @@
     display: grid;
     gap: 2rem;
     grid-template-columns: 1fr;
-    width: min(100%, 100rem);
+    width: min(100%, 110rem);
     padding: 4rem 1.25rem 5rem;
-    background-color: var(--clr-gradients-white);
 
     @include a.breakpoint(medium) {
       grid-template-columns: repeat(2, 1fr);
