@@ -3,3 +3,9 @@
 :root {
   @include a.map-to-root(clr, a.$colors);
 }
+
+body {
+  display: grid;
+  justify-items: center;
+  grid-template: max-content max-content max-content / 1fr;
+}

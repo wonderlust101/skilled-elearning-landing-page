@@ -1,0 +1,32 @@
+@use '../abstract' as a;
+
+.footer {
+  display: grid;
+  justify-items: center;
+  width: 100%;
+  background-color: var(--clr-blue-900);
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: min(100%, 110rem);
+    padding: 1rem 1.25rem;
+
+    @include a.breakpoint(medium) {
+      padding: 1.5rem 2.75rem;
+    }
+
+    @include a.breakpoint(large) {
+      padding: 1.5rem 5rem;
+    }
+  }
+
+  &__logo {
+    width: 5rem;
+
+    @include a.breakpoint(large) {
+      width: 7rem;
+    }
+  }
+}

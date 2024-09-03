@@ -1,0 +1,46 @@
+@use '../abstract' as a;
+
+.hero {
+  display: grid;
+  justify-items: center;
+  gap: 3rem;
+  padding: 4rem 1.25rem;
+  width: min(100%, 110rem);
+
+  @include a.breakpoint(medium) {
+    justify-items: flex-start;
+    padding: 4rem 2.75rem;
+  }
+
+  @include a.breakpoint(large) {
+    padding: 16rem 10rem 14rem;
+  }
+
+  &__call-to-action {
+    display: grid;
+    justify-items: flex-start;
+    gap: 2.5rem;
+
+    @include a.breakpoint(medium){
+      width: 50%;
+    }
+  }
+
+  &__text {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  &__image-container {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: min(100%, 30rem);
+    @include a.breakpoint(medium){
+      display: none;
+    }
+  }
+}

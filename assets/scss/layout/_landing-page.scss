@@ -1,0 +1,42 @@
+@use '../abstract' as a;
+
+.landing-page {
+  @include a.breakpoint(medium) {
+    background: url('/assets/images/image-hero-tablet@2x.webp') top -4rem right -16rem no-repeat;
+    background-size: 40rem;
+  }
+
+  @include a.breakpoint(large) {
+    background: url('/assets/images/image-hero-desktop@2x.webp') top -6rem right -20rem no-repeat;
+    background-size: 65rem;
+  }
+
+  @include a.breakpoint(x-large) {
+    background: url('/assets/images/image-hero-desktop@2x.webp') calc(50% + 43rem) -6rem no-repeat;
+    background-size: 65rem;
+  }
+
+  &__content {
+    display: grid;
+    justify-items: center;
+  }
+
+  &__card-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    width: min(100%, 100rem);
+    padding: 4rem 1.25rem 5rem;
+    background-color: var(--clr-gradients-white);
+
+    @include a.breakpoint(medium) {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 4rem 2.75rem 9rem;
+    }
+
+    @include a.breakpoint(large) {
+      grid-template-columns: repeat(3, 1fr);
+      padding: 4rem 5rem 9rem;
+    }
+  }
+}

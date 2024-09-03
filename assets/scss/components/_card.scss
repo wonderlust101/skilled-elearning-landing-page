@@ -1,0 +1,27 @@
+.card {
+  position: relative;
+  margin-top: 1.5rem;
+  padding: 4rem 2rem 2.5rem;
+  box-shadow: 0 25px 50px var(--clr-box-shadow);
+  border-radius: 1rem;
+
+  &__icon {
+    position: absolute;
+    top: -1.5rem;
+  }
+
+  &__first-card {
+    padding: 2rem;
+    color: white;
+    background: var(--clr-gradients-pink);
+  }
+
+  &__text{
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  &__link {
+    color: var(--clr-pink-600);
+  }
+}

@@ -1,0 +1,19 @@
+.button {
+  padding: 1rem 2rem;
+  border-radius: 1.75rem;
+
+  &--dark-blue {
+    color: var(--clr-white);
+    background-color: var(--clr-blue-900);
+  }
+
+  &--pink-gradient {
+    color: var(--clr-white);
+    background: var(--clr-gradients-pink);
+  }
+
+  &--purple-gradient {
+    color: var(--clr-white);
+    background: var(--clr-gradients-purple);
+  }
+}
